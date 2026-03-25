@@ -4,10 +4,10 @@ jobs:
    style-check:
      runs-on: ubuntu-latest
      steps:
-       - uses: actions/checkout@v2
-       - uses: actions/setup-python@v2
+       - uses: actions/checkout@v6
+       - uses: actions/setup-python@v6
          with:
-           python-version: '3.8.10'
+           python-version: '3.13'
        - name: "Install style checker"
          run: pip install black
        - name: "Run style check for python files"
@@ -16,10 +16,10 @@ jobs:
      needs: style-check
      runs-on: ubuntu-latest
      steps:
-       - uses: actions/checkout@v2
-       - uses: actions/setup-python@v2
+       - uses: actions/checkout@v6
+       - uses: actions/setup-python@v6
          with:
-           python-version: '3.8.10'
+           python-version: '3.13'
        - name: "Install pytest"
          run: pip install pytest
        - name: "Install coverage"
@@ -36,10 +36,10 @@ jobs:
      needs: test
      runs-on: ubuntu-latest
      steps:
-       - uses: actions/checkout@v2
-       - uses: actions/setup-python@v2
+       - uses: actions/checkout@v6
+       - uses: actions/setup-python@v6
          with:
-           python-version: '3.8.10'
+           python-version: '3.13'
        - name: "Install pytest"
          run: pip install pytest
        - name: "Install coverage"
